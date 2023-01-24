@@ -8,8 +8,6 @@ $Body = @{
 
 $authCode = Invoke-RestMethod -Method 'POST' -Uri "https://tenant.saasit.com/api/rest/authentication/login" -Body $body
 
-
-
 $headers = @{
     Authorization=$authCode  
     Content='application/json'
