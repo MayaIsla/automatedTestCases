@@ -30,4 +30,7 @@ $incidentBody = "{
     'Owner': ''
 }"
 
+$numTestCase = Read-Host "Enter Number of Test Cases: "
+for ($i =1; $i -le $numTestCase; $i++){
 Invoke-RestMethod -Method 'POST' -Uri "https://tenant.saasit.com/api/odata/businessobject/incidents/" -Body $incidentBody -Headers $headers
+}
